@@ -1,8 +1,9 @@
 npm init -y
 npm i express
 npm i ioredis
+npm i axios
 
-docker run -d --name redis-stack -p 6379:6379 -p 8001:8001 redis/redis-stack:latest
+docker run -d --name redis-stack -p 6379:6379 -p 8001:8001 redis/redis-stack:latest : spin up
 
 docker exec -it .. bash
-ping
+redis-cli ping
